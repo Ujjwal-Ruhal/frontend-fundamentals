@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Extra HTML topics notes for study: comments, semantic tags, input types, entities, canvas, progress, details, etc.">
+  <meta name="author" content="Ujjwal Ruhal">
+
+  <!-- Favicon (replace with your file if you have one) -->
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <title>Extra HTML Topics - My Notes</title>
+</head>
+<body>
+
+  <h1>📙 Extra HTML Topics - My Notes</h1>
+  <p>Yeh file un extra topics ke liye hai jo basic notes me add karna zaroori hai.</p>
+  <hr>
+
+  <!-- 1. Comments -->
+  <h2>1. Comments</h2>
+  <p><b>Use:</b> Code me notes/description likhne ke liye — browser me visible nahi hota.</p>
+  <pre>&lt;!-- This is a comment --&gt;</pre>
+  <p><b>Output:</b> (No visible output — comment hidden from page)</p>
+  <!-- This is a comment -->
+
+  <!-- 2. Semantic Tags -->
+  <h2>2. Semantic Tags</h2>
+  <p><b>Use:</b> Page structure ko clear banane ke liye (search engines aur accessibility me helpful).</p>
+  <pre>
+&lt;header&gt;Header content (logo, title)&lt;/header&gt;
+&lt;nav&gt;Navigation links&lt;/nav&gt;
+&lt;main&gt;
+  &lt;section&gt;Section content&lt;/section&gt;
+  &lt;article&gt;Article / post&lt;/article&gt;
+  &lt;aside&gt;Sidebar / notes&lt;/aside&gt;
+&lt;/main&gt;
+&lt;footer&gt;Footer info&lt;/footer&gt;
+  </pre>
+  <p><b>Output:</b></p>
+  <header>
+    <h3>Header (site title / logo)</h3>
+  </header>
+  <nav>
+    <a href="#semantic">Semantic</a> |
+    <a href="#entities">Entities</a> |
+    <a href="#media">Media</a>
+  </nav>
+  <main>
+    <section id="semantic">
+      <h4>Section</h4>
+      <p>This is a section — use for grouped content.</p>
+    </section>
+    <article>
+      <h4>Article</h4>
+      <p>Independent piece like blog post.</p>
+    </article>
+    <aside>
+      <p>Aside / sidebar content (notes, links)</p>
+    </aside>
+  </main>
+  <footer>
+    <p>Footer — contact or copyright</p>
+  </footer>
+
+  <!-- 3. Block vs Inline -->
+  <h2>3. Block vs Inline Elements</h2>
+  <p><b>Use:</b> Samjho kaunsa element nayi line leta hai (block) aur kaunsa inline rehta hai.</p>
+  <pre>
+&lt;div&gt;This is a block element (div)&lt;/div&gt;
+This is an inline element: &lt;span&gt;inline text&lt;/span&gt; inside a paragraph.
+  </pre>
+  <p><b>Output:</b></p>
+  <div>This is a block element (div) — it starts on a new line.</div>
+  <p>This is an inline element: <span>inline text</span> inside this paragraph.</p>
+
+  <!-- 4. Entities (special characters) -->
+  <h2>4. Entities (Special Characters)</h2>
+  <p><b>Use:</b> Special symbols ko safely HTML me show karne ke liye.</p>
+  <pre>
+&amp;nbsp;   → non-breaking space
+&amp;copy;   → ©
+&amp;lt;     → &lt;
+&amp;gt;     → &gt;
+&amp;amp;    → &
+  </pre>
+  <p><b>Output:</b></p>
+  <p>Example: &nbsp; (this shows a non-breaking space before this bracket) &lt; &gt; &copy; &amp;</p>
+
+  <!-- 5. Meta tags & Favicon -->
+  <h2>5. Meta Tags &amp; Favicon</h2>
+  <p><b>Use:</b> Page info, description, author, charset, viewport, aur browser tab icon (favicon).</p>
+  <pre>
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="description" content="Short description"&gt;
+&lt;link rel="icon" href="favicon.png" type="image/png"&gt;
+  </pre>
+  <p><b>Output:</b> (No direct visible output on page; affects SEO, mobile scaling and tab icon)</p>
+
+  <!-- 6. Input Types in Forms -->
+  <h2>6. Form Input Types</h2>
+  <p><b>Use:</b> Different input types se user se proper data le sakte ho.</p>
+  <pre>
+&lt;form&gt;
+  &lt;input type="text" name="name" placeholder="Name"&gt;
+  &lt;input type="email" name="email" placeholder="Email"&gt;
+  &lt;input type="password" name="pass"&gt;
+  &lt;input type="number" name="age" min="1" max="100"&gt;
+  &lt;input type="date" name="dob"&gt;
+  &lt;input type="checkbox" name="agree"&gt; Accept
+  &lt;input type="radio" name="gender" value="m"&gt; M
+  &lt;input type="file" name="resume"&gt;
+  &lt;input type="submit" value="Send"&gt;
+&lt;/form&gt;
+  </pre>
+  <p><b>Output:</b></p>
+  <form>
+    <input type="text" name="name" placeholder="Name"><br><br>
+    <input type="email" name="email" placeholder="Email"><br><br>
+    <input type="password" name="pass" placeholder="Password"><br><br>
+    <input type="number" name="age" min="1" max="100" placeholder="Age"><br><br>
+    <input type="date" name="dob"><br><br>
+    <input type="checkbox" name="agree"> Accept terms<br><br>
+    <input type="radio" name="gender" value="m"> Male
+    <input type="radio" name="gender" value="f"> Female<br><br>
+    <input type="file" name="resume"><br><br>
+    <input type="submit" value="Send">
+  </form>
+
+  <!-- 7. HTML5 New Features -->
+  <h2>7. HTML5 Features</h2>
+
+  <h3>&lt;video&gt; &amp; &lt;audio&gt;</h3>
+  <p><b>Use:</b> Directly page me media add karne ke liye.</p>
+  <pre>
+&lt;audio controls&gt;
+  &lt;source src="sample.mp3" type="audio/mpeg"&gt;
+&lt;/audio&gt;
+
+&lt;video width="320" controls&gt;
+  &lt;source src="sample.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+  </pre>
+  <p><b>Output:</b></p>
+  <audio controls>
+    <source src="sample.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <br><br>
+  <video width="320" controls>
+    <source src="sample.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <h3>&lt;canvas&gt; (simple drawing)</h3>
+  <p><b>Use:</b> Graphics, charts, game drawing etc. (requires JavaScript).</p>
+  <pre>
+&lt;canvas id="myCanvas" width="300" height="100"&gt;Your browser does not support canvas.&lt;/canvas&gt;
+&lt;script&gt;
+  var c = document.getElementById('myCanvas');
+  var ctx = c.getContext('2d');
+  ctx.fillStyle = '#f0f0f0';
+  ctx.fillRect(10, 10, 280, 80);
+  ctx.fillStyle = '#000';
+  ctx.font = '16px Arial';
+  ctx.fillText('Canvas example (rectangle)', 20, 50);
+&lt;/script&gt;
+  </pre>
+  <p><b>Output:</b></p>
+  <canvas id="myCanvas" width="300" height="100">Your browser does not support canvas.</canvas>
+  <script>
+    // simple canvas drawing
+    (function(){
+      var c = document.getElementById('myCanvas');
+      if (!c) return;
+      var ctx = c.getContext('2d');
+      ctx.fillStyle = '#f0f0f0';
+      ctx.fillRect(10, 10, 280, 80);
+      ctx.fillStyle = '#000';
+      ctx.font = '16px Arial';
+      ctx.fillText('Canvas example (rectangle)', 20, 50);
+    })();
+  </script>
+
+  <h3>&lt;progress&gt; (loading bar)</h3>
+  <p><b>Use:</b> Show progress/percentage.</p>
+  <pre>
+&lt;progress value="70" max="100"&gt;70%&lt;/progress&gt;
+  </pre>
+  <p><b>Output:</b></p>
+  <progress value="70" max="100">70%</progress>
+
+  <h3>&lt;details&gt; / &lt;summary&gt; (collapsible)</h3>
+  <p><b>Use:</b> Show hide content easily — browser built-in toggle.</p>
+  <pre>
+&lt;details&gt;
+  &lt;summary&gt;Click to expand&lt;/summary&gt;
+  Hidden content here.
+&lt;/details&gt;
+  </pre>
+  <p><b>Output:</b></p>
+  <details>
+    <summary>Click to expand</summary>
+    <p>This content is hidden until you expand the details tag.</p>
+  </details>
+
+  <!-- 8. Small Revision Table -->
+  <h2>8. Quick Revision Table</h2>
+  <table border="1" cellpadding="4">
+    <tr>
+      <th>Thing</th>
+      <th>Use</th>
+      <th>Example</th>
+    </tr>
+    <tr>
+      <td>Comments</td>
+      <td>Code notes</td>
+      <td><!-- comment --></td>
+    </tr>
+    <tr>
+      <td>Semantic tags</td>
+      <td>Structure</td>
+      <td>&lt;header&gt; &lt;main&gt; &lt;footer&gt;</td>
+    </tr>
+    <tr>
+      <td>Entities</td>
+      <td>Special chars</td>
+      <td>&amp;copy; &amp;lt; &amp;gt;</td>
+    </tr>
+    <tr>
+      <td>Input types</td>
+      <td>User forms</td>
+      <td>text, email, date, file</td>
+    </tr>
+    <tr>
+      <td>Canvas / Progress</td>
+      <td>Graphics / progress</td>
+      <td>&lt;canvas&gt; / &lt;progress&gt;</td>
+    </tr>
+    <tr>
+      <td>Details / Summary</td>
+      <td>Collapsible</td>
+      <td>&lt;details&gt; &lt;summary&gt;</td>
+    </tr>
+  </table>
+
+  <hr>
+  <p>— End of extra topics —</p>
+  <p>Note: Replace <code>sample.mp3</code>, <code>sample.mp4</code>, and <code>favicon.png</code> with your actual files if you want the media/favicon to load locally.</p>
+
+</body>
+</html>
